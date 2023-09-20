@@ -411,6 +411,7 @@ h4 {
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 35px;
 }
 .partners__list {
     display: grid;
@@ -616,7 +617,7 @@ h4 {
     grid-template-columns: 135px 1fr 135px;
     align-items: center;
     column-gap: 64px;
-    padding: 31px 0;
+    padding: 31px 15px;
     position: relative;
 }
 .footer__container::before {
@@ -669,5 +670,107 @@ h4 {
     .footer__list {
         flex-direction: column;
         row-gap: 31px;
+    }
+}
+
+/* ===============================pricing page========================================== */
+.pricing__container {
+    margin-top: 80px;
+}
+.pricing__title {
+    font-weight: 700;
+}
+.pricing__items {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+.item-pricing {
+    display: flex;
+    flex-direction: column;
+}
+.item-pricing__title {
+    color: var(--pink-color);
+}
+.item-pricing__text {
+    flex: 1 1 auto;
+    color: var(--text-color);
+    margin-top: 16px;
+}
+.item-pricing__price {
+    color: var(--main-color);
+    font-family: "DM Serif Display";
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -0.431px;
+    margin-top: 8px;
+}
+.item-pricing__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.item-pricing__list::before {
+    content: "";
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-color);
+    display: block;
+    opacity: 0.25;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.item-pricing__list::after {
+    content: "";
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-color);
+    display: block;
+    opacity: 0.25;
+    margin-top: 24px;
+
+}
+/* need to fix */
+.item-pricing__item {
+    font-size: 16px;
+    color: var(--main-color);
+}
+.item-pricing__item.active::before {
+    content: "";
+    background: url(../img/check-icon.svg) no-repeat;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin-right: 24px;
+
+}
+.item-pricing__button {
+    color: var(--main-color);
+    background-color: inherit;
+    border: 1px solid var(--main-color);
+    border-radius: 35px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    align-self: flex-start;
+    padding: 10px 28px;
+    margin-top: 24px;
+}
+.item-pricing__button:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    transition: all 0.5s ease 0s;
+}
+@media (max-width: 992.98px) {
+    .item-pricing {
+        align-items: baseline;
     }
 }

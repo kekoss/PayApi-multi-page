@@ -142,9 +142,17 @@ h4 {
         font-size: 48px;
         line-height: 56px;
     }
+    h1.heading-sm {
+        font-size: 48px;
+        line-height: 56px;
+    }
 }
 @media (max-width: 575.98px) {
     h1.heading-lg {
+        font-size: 32px;
+        line-height: 36px;
+    }
+    h1.heading-sm {
         font-size: 32px;
         line-height: 36px;
     }
@@ -738,6 +746,10 @@ h4 {
 .item-pricing__item {
     font-size: 16px;
     color: var(--main-color);
+    opacity: 0.5;
+}
+.item-pricing__item.active {
+    opacity: 1;
 }
 .item-pricing__item.active::before {
     content: "";
@@ -770,7 +782,33 @@ h4 {
     transition: all 0.5s ease 0s;
 }
 @media (max-width: 992.98px) {
+    .pricing__title {
+        text-align: center;
+    }
+}
+@media (max-width: 767.98px) {
+    .pricing__items {
+        grid-template-columns:auto;
+        justify-content: center;
+        row-gap: 48px;
+    }
     .item-pricing {
-        align-items: baseline;
+        text-align: center;
+    }
+    .item-pricing__text {
+        opacity: 0;
+    }
+    .item-pricing__list {
+        width: 100%;
+    }
+    .item-pricing__item {
+        position: relative;
+        top: 0;
+        left: 0%;
+        transform: translate(36%, 0);
+        text-align: start;
+    }
+    .item-pricing__button {
+        align-self: center;
     }
 }

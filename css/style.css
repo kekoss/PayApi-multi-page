@@ -914,3 +914,48 @@ h4 {
         text-align: center;
     }
 }
+
+.contact-main-block {
+}
+.contact-main-block__container {
+}
+.contact-main-block__title {
+    margin-top: 82px;
+    max-width: 730px;
+}
+.contact-main-block__content {
+    margin-top: 43px;
+    display: flex;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input, textarea {
+    background-color: inherit;
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color);
+    outline: none;
+    opacity: 0.5;
+    width: 445px;
+}
+.contact-form__name {
+}
+.contact-form__email {
+}
+.contact-form__company {
+}
+.contact-form__title {
+}
+.contact-form__message {
+}
+.contact-form__checkbox {
+}
+.contact-form__button {
+}
+.contact-main-block__partners {
+}
+.partners__title {
+    margin-bottom: 40px;
+    max-width: 445px;
+}
